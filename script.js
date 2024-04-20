@@ -26,10 +26,9 @@ console.log(currentDate.toLocaleDateString());
 console.log(currentDate.toLocaleTimeString());
 
 let next7Days = new Date(currentDate.getTime() + 7 * 24 * 60 * 60 * 1000 );
-console.log(next7Days);
-console.log(next7Days.toLocaleTimeString());
-console.log(next7Days.toLocaleDateString());
-
+// console.log(next7Days);
+// console.log(next7Days.toLocaleTimeString());
+// console.log(next7Days.toLocaleDateString());
 
 let upCommingEvents = events.filter(myEvent => myEvent.date <= next7Days);
 //console.log(upCommingEvents);
@@ -39,7 +38,12 @@ function displayUpcommingEvents(){
         console.log(event.title)
     })
 }
-displayUpcommingEvents()
+displayUpcommingEvents();
+
+let organisers = new WeekMap();
+
+
+
 
 
 
